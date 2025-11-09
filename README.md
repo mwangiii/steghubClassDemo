@@ -1,1 +1,1 @@
-# This is a demo for class 15 done by Kevin Mwangi
+# Testing ssh connection and file transfer with Jenkins
