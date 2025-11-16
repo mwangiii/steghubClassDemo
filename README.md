@@ -1,3 +1,2 @@
 # Testing ssh connection and file transfer with Jenkins
-# First time 
-# Second time
+## Testing with the class
