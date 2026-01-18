@@ -1,0 +1,21 @@
+
+# [web]
+# <web_server1_ip> ansible_ssh_user=<ssh_user>
+# <web_server2_ip> ansible_ssh_user=<ssh_user>
+# <web_server3_ip> ansible_ssh_user=<ssh_user>
+
+# [lb]
+# <lb_server_ip> ansible_ssh_user=<ssh_user>
+
+# [db]
+# <db_server_ip> ansible_ssh_user=<ssh_user>
+
+# [nfs]
+# <nfs_server_ip> ansible_ssh_user=<ssh_user>
+
+[webservers]
+10.128.0.14 ansible_ssh_user=mwangi8kevin
+10.128.0.15 ansible_ssh_user=mwangi8kevin
+
+[nfs]
+10.128.0.15 ansible_ssh_user=mwangi8kevin

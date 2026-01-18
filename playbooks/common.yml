@@ -1,0 +1,18 @@
+- name: update web and nfs
+  hosts: webservers, nfs
+  become: true
+  tasks:
+    - name: ensure wireshark is at the latest version
+      yum:
+        name: wireshark
+        state: latest
+    
+
+- name: Ensure Wireshark is at the latest version
+  hosts: all
+  become: true
+  tasks:
+    - name: Ensure Wireshark is at the latest version
+      package:
+        name: wireshark
+        state: latest
