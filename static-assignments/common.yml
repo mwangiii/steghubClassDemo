@@ -1,0 +1,20 @@
+- name: update web, nfs and db servers
+  hosts: webservers, nfs, db
+  become: true
+  tasks:
+    - name: ensure tcpdump is at the latest version
+      yum:
+        name: tcpdump
+        state: latest
+    
+
+- name: Ensure tcpdump is at the latest version
+  hosts: all
+  become: true
+  tasks:
+    - name: Ensure tcpdump is at the latest version
+      package:
+        name: tcpdump
+        state: latest
+
+            
