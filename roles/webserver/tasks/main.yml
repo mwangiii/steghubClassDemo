@@ -1,0 +1,31 @@
+---
+
+- name: Install Apache
+  become: true
+  ansible.builtin.apt:
+    name: apache2
+    state: present
+    update_cache: yes   
+
+- name: Install Git
+  become: true
+  ansible.builtin.apt:
+    name: git
+    state: present
+
+- name: Clone a repo
+  become: true
+  ansible.builtin.git:
+    repo: https://github.com/mwangiii/steghubClassDemo.git
+    dest: /var/www/html
+    force: yes
+
+- name: Copy HTML content to one level up
+  become: true
+  ansible.builtin.command: mv /var/www/html/* /var/www/
+
+- name: Recursively remove /var/www/html/
+  become: true
+  ansible.builtin.file:
+    path: /var/www/html/
+    state: absent
